@@ -1,0 +1,10 @@
+{
+  "name": "fleetctl",
+  "version": "0.0.1",
+  "dependencies": {
+    "lodash": {
+      "version": "2.4.1",
+      "from": "lodash@~2.4.1"
+    }
+  }
+}

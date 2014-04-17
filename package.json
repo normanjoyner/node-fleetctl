@@ -1,0 +1,28 @@
+{
+  "name": "fleetctl",
+  "version": "0.0.0",
+  "description": "A nodejs module for interacting with fleet.",
+  "main": "main.js",
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/normanjoyner/node-fleetctl.git"
+  },
+  "keywords": [
+    "fleet",
+    "fleetctl",
+    "coreos"
+  ],
+  "author": "Norman Joyner <norman.joyner@gmail.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/normanjoyner/node-fleetctl/issues"
+  },
+  "homepage": "https://github.com/normanjoyner/node-fleetctl"
+}
