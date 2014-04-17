@@ -1,6 +1,6 @@
 {
   "name": "fleetctl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A nodejs module for interacting with fleet.",
   "main": "main.js",
   "dependencies": {
