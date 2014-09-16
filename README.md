@@ -40,7 +40,7 @@ fleetctl.configure({
 
 The following fleetctl sub-commands are available in this module:
 
-list-machines
+**list-machines**
 ```javascript
 fleetctl.list_machines(function(err, machines){
     if(err)
@@ -50,7 +50,7 @@ fleetctl.list_machines(function(err, machines){
 });
 ```
 
-list-units
+**list-units**
 ```javascript
 fleetctl.list_units(function(err, units){
     if(err)
@@ -60,7 +60,7 @@ fleetctl.list_units(function(err, units){
 });
 ```
 
-submit
+**submit**
 ```javascript
 fleetctl.submit(["unit1", "unit2"], function(err){
     if(err)
@@ -68,7 +68,7 @@ fleetctl.submit(["unit1", "unit2"], function(err){
 });
 ```
 
-load
+**load**
 ```javascript
 fleetctl.load(["unit1", "unit2"], function(err){
     if(err)
@@ -76,7 +76,7 @@ fleetctl.load(["unit1", "unit2"], function(err){
 });
 ```
 
-unload
+**unload**
 ```javascript
 fleetctl.unload("unit1", function(err){
     if(err)
@@ -84,7 +84,7 @@ fleetctl.unload("unit1", function(err){
 });
 ```
 
-start
+**start**
 ```javascript
 fleetctl.start("unit1", function(err){
     if(err)
@@ -92,7 +92,7 @@ fleetctl.start("unit1", function(err){
 });
 ```
 
-stop
+**stop**
 ```javascript
 fleetctl.stop("unit1", ["-noblock=true"], function(err){
     if(err)
@@ -100,7 +100,7 @@ fleetctl.stop("unit1", ["-noblock=true"], function(err){
 });
 ```
 
-destroy
+**destroy**
 ```javascript
 fleetctl.destroy("unit1", function(err){
     if(err)
