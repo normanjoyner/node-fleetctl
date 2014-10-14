@@ -94,7 +94,7 @@ fleetctl.start("unit1", function(err){
 
 **stop**
 ```javascript
-fleetctl.stop("unit1", ["-noblock=true"], function(err){
+fleetctl.stop("unit1", ["-no-block=true"], function(err){
     if(err)
         throw err;
 });

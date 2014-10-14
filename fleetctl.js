@@ -7,6 +7,8 @@ function Fleetctl(config){
 
 Fleetctl.prototype.configure = function(config){
     this.binary = config.binary || "fleetctl";
+    if(config.tunnel)
+      this.tunnel = config.tunnel;
 }
 
 _.each(api, function(method, name){
