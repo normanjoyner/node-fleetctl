@@ -29,12 +29,13 @@ var fleetctl = new Fleetctl({
 });
 ```
 
-Alternatively, you can call the ```configure()``` method after instantiation.
+Alternatively, you can call the ```configure()``` method after instantiation. When configuring, you can pass any available global Fleetctl option.
 ```javascript
 var Fleetctl = require("fleetctl");
 var fleetctl = new Fleetctl();
 fleetctl.configure({
     binary: "/Users/normanjoyner/Development/fleet/fleetctl"
+    tunnel: "10.10.10.10"
 });
 ```
 
@@ -57,6 +58,16 @@ fleetctl.list_units(function(err, units){
         throw err;
 
     console.log(units);
+});
+```
+
+**list-unit-files**
+```javascript
+fleetctl.list_unit_files(function(err, unit_files){
+    if(err)
+        throw err;
+
+    console.log(unit_files);
 });
 ```
 
@@ -94,7 +105,7 @@ fleetctl.start("unit1", function(err){
 
 **stop**
 ```javascript
-fleetctl.stop("unit1", ["-no-block=true"], function(err){
+fleetctl.stop("unit1", {"no-block": true}, function(err){
     if(err)
         throw err;
 });
