@@ -34,7 +34,7 @@ Alternatively, you can call the ```configure()``` method after instantiation. Wh
 var Fleetctl = require("fleetctl");
 var fleetctl = new Fleetctl();
 fleetctl.configure({
-    binary: "/Users/normanjoyner/Development/fleet/fleetctl"
+    binary: "/Users/normanjoyner/Development/fleet/fleetctl",
     tunnel: "10.10.10.10"
 });
 ```
