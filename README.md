@@ -43,6 +43,15 @@ The following fleetctl sub-commands are available in this module:
 
 **list-machines**
 ```javascript
+/**
+ * Enumerate the current hosts in the cluster
+ * @method
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ * @param {array} list of machines
+ */
 fleetctl.list_machines(function(err, machines){
     if(err)
         throw err;
@@ -53,6 +62,15 @@ fleetctl.list_machines(function(err, machines){
 
 **list-units**
 ```javascript
+/**
+ * List the current state of units in the cluster
+ * @method
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ * @param {array} list of units
+ */
 fleetctl.list_units(function(err, units){
     if(err)
         throw err;
@@ -63,6 +81,15 @@ fleetctl.list_units(function(err, units){
 
 **list-unit-files**
 ```javascript
+/**
+ * List the units that exist in the cluster
+ * @method
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ * @param {array} list of unit files
+ */
 fleetctl.list_unit_files(function(err, unit_files){
     if(err)
         throw err;
@@ -73,6 +100,15 @@ fleetctl.list_unit_files(function(err, unit_files){
 
 **submit**
 ```javascript
+/**
+ * Upload one or more units to the cluster without starting them
+ * @method
+ * @param {string}/{array} paths of file to submit
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ */
 fleetctl.submit(["unit1", "unit2"], function(err){
     if(err)
         throw err;
@@ -81,6 +117,16 @@ fleetctl.submit(["unit1", "unit2"], function(err){
 
 **load**
 ```javascript
+/**
+ * Schedule one or more units in the cluster, first submitting them if necessary
+ * @method
+ * @param {string}/{array} unit name
+ * @param {object} [optional] options
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ */
 fleetctl.load(["unit1", "unit2"], function(err){
     if(err)
         throw err;
@@ -89,6 +135,16 @@ fleetctl.load(["unit1", "unit2"], function(err){
 
 **unload**
 ```javascript
+/**
+ * Unschedule one or more units in the cluster
+ * @method
+ * @param {string}/{array} unit name
+ * @param {object} [optional] options
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ */
 fleetctl.unload("unit1", function(err){
     if(err)
         throw err;
@@ -97,6 +153,16 @@ fleetctl.unload("unit1", function(err){
 
 **start**
 ```javascript
+/**
+ * Instruct systemd to start one or more units in the cluster, first submitting and loading if necessary
+ * @method
+ * @param {string}/{array} unit name
+ * @param {object} [optional] options
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ */
 fleetctl.start("unit1", function(err){
     if(err)
         throw err;
@@ -105,6 +171,16 @@ fleetctl.start("unit1", function(err){
 
 **stop**
 ```javascript
+/**
+ * Instruct systemd to stop one or more units in the cluster
+ * @method
+ * @param {string}/{array} unit name
+ * @param {object} [optional] options
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ */
 fleetctl.stop("unit1", {"no-block": true}, function(err){
     if(err)
         throw err;
@@ -113,6 +189,15 @@ fleetctl.stop("unit1", {"no-block": true}, function(err){
 
 **destroy**
 ```javascript
+/**
+ * Destroy one or more units in the cluster
+ * @method
+ * @param {string}/{array} unit name
+ * @param {function} callback function
+ *
+ * @callback
+ * @param {error} error object
+ */
 fleetctl.destroy("unit1", function(err){
     if(err)
         throw err;
